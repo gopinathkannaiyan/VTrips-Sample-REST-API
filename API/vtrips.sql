@@ -26,7 +26,7 @@ CREATE TABLE `users` (
   `username` varchar(150) NOT NULL,
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `user_location` varchar(50) NOT NULL,
+  `city` varchar(50) NOT NULL,
   `created_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -38,6 +38,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES ('Gopi','gopi182@gmail.com','pbkdf2:sha256:150000$PKseu5bq$1684ce780683f51bef58d507f3c2ac46e06ab4ff86db0147e3c641cce228e70e','New York','2020-04-05 03:07:29'),('testuser','testuser@gmail.com','pbkdf2:sha256:150000$hRsUcMAf$30e312db38a2e5af3068f0296beb00da45b081d5dd21a9d8ca75080695d5ee57','New York','2020-04-05 03:17:38');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -50,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-04-01 22:59:15
+-- Dump completed on 2020-04-05  9:29:31
